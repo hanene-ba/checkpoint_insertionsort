@@ -1,0 +1,14 @@
+PROCEDURE inserSort( arr : ARRAY_OF INTEGER)
+VAR
+    aux , i , value: INTEGER ; 
+BEGIN
+    FOR i FROM 1 TO arr.length -1 STEP 1  DO
+        value := arr[i]; 
+        aux := i ; 
+        WHILE ((aux > 0 ) and ( arr[aux -1]> value)) DO
+            arr[aux] := arr[aux - 1];
+            aux := aux -1; 
+        END_WHILE
+        arr[aux] := value ; 
+    END_FOR
+END
